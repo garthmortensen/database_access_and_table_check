@@ -1,0 +1,4 @@
+id,group_id,model,effective,whoami
+1,1,energy,"20230712010101",gm
+2,1,steel,"20230712010101",gm
+3,2,steel,"20230712020202",gm

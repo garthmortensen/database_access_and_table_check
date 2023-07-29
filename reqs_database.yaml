@@ -1,0 +1,18 @@
+database_requirements:
+  # first database
+  - database_type: sqllite
+    connection_string: sqlite:///standup_db/costs.db
+    description: the code does not use this
+    # list of all tables and views
+    data_objects:
+      - name: concrete_projected
+        description: table for projected concrete costs
+      - name: steel_projected
+        description: table for projected steel costs
+      - name: shingles_projected
+        description: table for projected shingle costs
+  # second database
+  - database_type: # mssqlserver
+    connection_string: # mssql+pymssql://user:pass@host/database
+    description: the code does not use this
+
