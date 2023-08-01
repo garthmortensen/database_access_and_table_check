@@ -2,16 +2,17 @@ import os
 from sqlalchemy import create_engine, text
 from sqlalchemy.exc import SQLAlchemyError
 import yaml
+import json
 
 
 def read_database_config():
-    """reads the database configuration from the 'reqs_database.yaml' file.
+    """reads the database configuration from the 'reqs_database.json' file.
 
     returns:
         dict: a dictionary containing the database configuration.
     """
-    with open('./reqs_database.yaml', 'r') as file:
-        config = yaml.safe_load(file)
+    with open('./reqs_database.json', 'r') as file:
+        config = json.load(file)
     return config
 
 
@@ -39,6 +40,7 @@ def verify_data_object_access(engine, name, description):
         connection.close()
     except SQLAlchemyError as e:
         print(f"Access FAILED for: {name} ({description}): {e}")
+
 
 config = read_database_config()
 for database in config['database_requirements']:

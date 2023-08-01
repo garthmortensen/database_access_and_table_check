@@ -1,0 +1,33 @@
+{
+  "database_requirements": [
+    {
+      "database_type": "sqllite",
+      "connection_string": "sqlite:///standup_db/costs.db",
+      "description": "the code does not use this",
+      "data_objects": [
+        {
+          "name": "concrete_projected",
+          "description": "table for projected concrete costs"
+        },
+        {
+          "name": "steel_projected",
+          "description": "table for projected steel costs"
+        },
+        {
+          "name": "shingles_projected",
+          "description": "table for projected shingle costs"
+        }
+      ]
+    },
+    {
+      "database_type": "# mssqlserver",
+      "connection_string": "# mssql+pymssql://user:pass@host/database",
+      "description": "the code does not use this"
+    },
+	{
+	"database_type": "mssql_sso",
+      "connection_string": "mssql+pyodbc://server_name/db_name?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes",
+      "description": "Single Sign-On (SSO) connection to Microsoft SQL Server"
+    }
+  ]
+}
